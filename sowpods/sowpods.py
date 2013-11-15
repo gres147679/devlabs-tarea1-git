@@ -10,7 +10,11 @@ from string import ascii_uppercase
 	a list of letters, which contains the letters NOT repeated twice or more 
 	in any word of the dictionary. The documentation can be generated with
 
-	pydoc sowpods	
+	pydoc sowpods
+
+	Aditionally, HTML documentation can be generated with
+
+	pydoc -w sowpods
 """
 __author__ = "Gustavo El Khoury <gustavoelkhoury@gmail.com>"
 
