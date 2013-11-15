@@ -141,7 +141,19 @@
           Por otra parte, si en el desarrollo de la aplicación se editan varios componentes para desarrollar funcionalidades
           distintas, el no tener un índice obligaría al desarrollador a tener sumo cuidado de editar únicamente los archivos
           que se atribuirían a un commit. El índice permitiría realizar varias tareas, y luego registrar los cambios
-          individualmente.<br>
+          individualmente.<br><br>
+
+          <b>Repositorio Local y Remoto:</b> Git introduce el paradigma distribuido en el manejo de código fuente (SCM),
+          al permitir que varios usuarios no tengan necesariamente que compartir un repositorio central. Esto se logra haciendo que los usuarios no hagan contribuciones directas al repositorio global, sino clonando (git clone) un repositorio <b>remoto</b>, lo cual crea una versión <b>local</b> de dicho repositorio, en el cual se registran los cambios que el programador desee. Una vez que el usuario lleve su versión local del repo a un estado lo suficientemente aceptable como para compartirlo con el resto del equipo, puede sincronizar las versiones local y remota (git push). Este proceso depende de que las líneas de tiempo de los repositorios coincidan: no existan commits entre el momento de la última sincronización (git pull) y los commits que ha agregado el usuario. Para esto,
+          cada programador debe, periódicamente, consultar y sincronizar los últimos cambios que el resto del equipo ha mandado al repositorio remoto (git pull).<br>
+          Es importante destacar que estos conflictos que ocurren al tener líneas de tiempo disjuntas, son manejadas como si se tratara del merge de dos ramas (remote branch y local branch)<br><br>
+
+          <b>Dirty Working Tree:</b> Esto sucede cuando se hacen cambios en el directorio de trabajo del repositorio, pero
+          dichos cambios aún no han sido registrados con un commit. Estos cambios son visibles en el sistema de archivos, y se encuentran documentados en el índice del repo. <br><br>
+
+          <b>Merge conflict:</b> A pesar de que Git incorpora un motor bastante poderoso para hacer merge de ramas en un repositorio, existen ciertos eventos que el gestor no puede manejar. Esto sucede cuando ramas distintas <b>editan
+          la misma sección de un archivo:</b> el gestor no puede decidir qué versión del archivo es la que se desea. Esto se conoce como merge conflict. En este caso el usuario debe intervenir manualmente, y decidir qué versión debe conservarse al hacer merge. <br><br>          
+
 
 
 
@@ -174,19 +186,19 @@
             <tbody>
               <tr>
                 <th scope="row">working dir</th>
+                <td>R</td>
+                <td></td>
+                <td>R</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
               </tr>
               <tr>
                 <th scope="row">index</th>
+                <td>R</td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
                 <td>R/W</td>
                 <td></td>
                 <td></td>
@@ -195,21 +207,21 @@
               <tr>
                 <th scope="row">local repo</th>
                 <td></td>
-                <td></td>
-                <td></td>
                 <td>W</td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>W</td>
+                <td>W</td>
+                <td>R</td>
+                <td>R</td>
               </tr>
               <tr>
                 <th scope="row">remote repo</th>
                 <td></td>
+                <td>R</td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>R</td>
+                <td>R/W</td>
                 <td></td>
               </tr>
             </tbody>
