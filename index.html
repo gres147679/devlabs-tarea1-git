@@ -90,9 +90,8 @@
           conflict causado por el paso 4.
         </h3>
         <div class="answer">
-          Colocar acá el hash. Nota: El hash sería algo como: 8a000d3d2ec8b5f8b2286ad279c54b430fc97c67<br />
-          o mejor aún, podrían apuntarlo directamente a github:
-          <a href="https://github.com/devlabs-usb/tarea1-git/commit/8a000d3d2ec8b5f8b2286ad279c54b430fc97c67" target="blank">8a000d3d2ec8b5f8b2286ad279c54b430fc97c67</a>
+          El commit pedido es el <a href="https://github.com/gres147679/devlabs-tarea1-git/commit/daad07a5f13377d88f2d91e1c9138429010d622b" target="blank">daad07a5f13377d88f2d91e1c9138429010d622b</a>
+          
         </div>
       </article>
       <article id="q2">
@@ -107,10 +106,10 @@
           subsecuencia “DD”.
         </h3>
         <div class="answer">
-          Coloca tu respuesta aquí.<br/>
-          Opcionalmente, puedes poner los archivos con la solución
-          en tu repositorio y poner la dirección del archivo acá.
-          Como por ejemplo: /Código/Scrabble.py
+          El código se encuentra en la carpeta 
+          <a href="https://github.com/gres147679/devlabs-tarea1-git/tree/gh-pages/sowpods" target="blank">
+          sowpods</a> de mi repositorio.<br/>
+           
         </div>
       </article>
       <article id="q3">
@@ -120,7 +119,32 @@
           repo', 'dirty working tree' y 'merge conflict'.
         </h3>
         <div class="answer">
-          Coloca tus respuestas aquí.
+          <b>Working Directory:</b> Es el directorio local del repositorio de Git. Corresponde a la ubicación
+          en el sistema de archivos de la computadora donde el usuario puede modificar el contenido del
+          repositorio, editando archivos y carpetas. Los cambios, además de registrarse en el sistema
+          de archivos (lo cual es vital si se desea que demás utilidades del SO accedan a los mismos)
+          se almacenan en el índice (también llamado staging area) del repositorio.
+          Estos cambios no se reflejarán formalmente en el historial de versiones hasta que el usuario
+          haga un commit. <br> <br>
+
+          <b>Index:</b> También conocido como staging area, es un espacio virtual del repositorio donde se
+          registran los cambios que se hacen en el mismo. Este índice facilita no solamente tener una forma
+          rápida de revertir cambios indeseados o innecesarios, garantizando devolver el repositorio a un estado
+          completamente igual al anterior (con git reset), sino que permite registrar cada cambio a un archivo
+          o carpeta de manera independiente, permitiendo que los commits sean tan atómicos como se quiera.<br>
+
+          Supongamos que se detecta un bug en una aplicación en desarrollo. Inicialmente puede creerse que el bug
+          se asocia a un sólo componente defectuoso: si esto resulta incorrecto, un único commit puede no describir
+          completamente el proceso que llevó a corregir el bug. Haciendo varios commits, uno por archivo modificado,
+          se garantiza una descripción completa.<br>
+
+          Por otra parte, si en el desarrollo de la aplicación se editan varios componentes para desarrollar funcionalidades
+          distintas, el no tener un índice obligaría al desarrollador a tener sumo cuidado de editar únicamente los archivos
+          que se atribuirían a un commit. El índice permitiría realizar varias tareas, y luego registrar los cambios
+          individualmente.<br>
+
+
+
         </div>
       </article>
       <article id="q4">
