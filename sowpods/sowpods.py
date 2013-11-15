@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """First homework for DevLabs"""
 import argparse
-from string import ascii_uppercase
+import string
 
 """
 	SOWPODS
@@ -15,6 +15,9 @@ from string import ascii_uppercase
 	Aditionally, HTML documentation can be generated with
 
 	pydoc -w sowpods
+
+	This code can be run with --help or -h flags in order to obtain more
+	information regarding the arguments that can be taken
 """
 __author__ = "Gustavo El Khoury <gustavoelkhoury@gmail.com>"
 
@@ -22,7 +25,7 @@ __version__ = '1.0'
 
 def generateListOfEnglishCharacters():
 	"""Generates the list of English Characters, and returns it as a set"""
-	return ascii_uppercase
+	return string.ascii_uppercase
 
 def generateDuplicatedChars(charSet):
 	"""Given a charSet, it returns a list of strings of the form CC for
